@@ -1,7 +1,11 @@
-popHeader();
 popCards();
 
-function popHeader() { }
+document.getElementById("menu").addEventListener('click', event => {
+    let a = document.getElementById("listMenu")
+    document.getElementById("listMenu").classList.toggle("active")
+})
+
+
 
 function popCards() {
     const actualite = document.getElementById("actualite");

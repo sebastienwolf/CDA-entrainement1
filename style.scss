@@ -34,34 +34,78 @@ header {
             height: 25px;
         }
 
-        ul {
-            display: flex;
-            flex-direction: row;
+        button {
+            background: $color2;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            z-index: 5;
+
+            svg {
+                color: $color1
+            }
 
             @media only screen and (min-width: 1024px) {
-                gap: 20px;
+                visibility: hidden;
+            }
+        }
+
+
+
+        #listMenu {
+            @media only screen and (max-width: 1024px) {
+
+                transition: 0.5s;
+                top: 30px;
+                right: 10px;
+                width: 0px;
+                height: 0px;
+                visibility: hidden;
             }
 
-            li {
-                list-style: none;
-
-                a {
-                    text-decoration: none;
-                    color: $color1;
-                    transition: 0.5s;
-
-                }
-
-                a:hover {
-                    transition: 0.5s;
-                    color: $color2;
-
-                }
+            @media only screen and (min-width: 1024px) {
+                visibility: visible;
             }
 
+            ul {
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $color1;
+                        transition: 0.5s;
+
+                    }
+
+                    a:hover {
+                        transition: 0.5s;
+                        color: $color2;
+
+                    }
+                }
+
+                @media only screen and (min-width: 1024px) {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                }
+            }
+        }
+
+        #listMenu.active {
+            transition: 0.5s;
+            visibility: visible;
+            position: absolute;
+            background-color: $color3;
+            z-index: 0;
+            height: auto;
+            width: auto;
         }
     }
 }
+
 
 main {
     margin-top: 50px;

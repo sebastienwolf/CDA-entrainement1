@@ -43,37 +43,81 @@ header nav img {
   height: 25px;
 }
 
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+header nav button {
+  background: #b38420;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  z-index: 5;
+}
+
+header nav button svg {
+  color: #F8F9F7;
 }
 
 @media only screen and (min-width: 1024px) {
-  header nav ul {
-    gap: 20px;
+  header nav button {
+    visibility: hidden;
   }
 }
 
-header nav ul li {
+@media only screen and (max-width: 1024px) {
+  header nav #listMenu {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 30px;
+    right: 10px;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header nav #listMenu {
+    visibility: visible;
+  }
+}
+
+header nav #listMenu ul li {
   list-style: none;
 }
 
-header nav ul li a {
+header nav #listMenu ul li a {
   text-decoration: none;
   color: #F8F9F7;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-header nav ul li a:hover {
+header nav #listMenu ul li a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: #b38420;
+}
+
+@media only screen and (min-width: 1024px) {
+  header nav #listMenu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+}
+
+header nav #listMenu.active {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  visibility: visible;
+  position: absolute;
+  background-color: #000000;
+  z-index: 0;
+  height: auto;
+  width: auto;
 }
 
 main {

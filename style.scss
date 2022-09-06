@@ -1,0 +1,296 @@
+$color1: #F8F9F7;
+$color2: #b38420;
+$color3: #000000;
+
+* {
+    margin: 0;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+header {
+    z-index: 10;
+    width: 100%;
+    background-color: $color3;
+    border-bottom: 5px solid $color2;
+    position: fixed;
+    top: 0;
+
+    nav {
+        height: 50px;
+        width: 95%;
+
+        @media only screen and (min-width: 1024px) {
+            margin-left: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        img {
+            height: 25px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            @media only screen and (min-width: 1024px) {
+                gap: 20px;
+            }
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: $color1;
+                    transition: 0.5s;
+
+                }
+
+                a:hover {
+                    transition: 0.5s;
+                    color: $color2;
+
+                }
+            }
+
+        }
+    }
+}
+
+main {
+    margin-top: 50px;
+    background-image: url(https://www.kalysushi.com/wp-content/uploads/2020/06/kalysushi-restaurant-sushi-background-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    #top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10%;
+
+        background-image: url(https://www.kalysushi.com/wp-content/uploads/2020/03/kalysushi-restaurant-sushi.jpg);
+        background-size: cover;
+        height: 100px;
+
+        @media only screen and (min-width: 1024px) {}
+
+        height: 500px;
+
+
+
+        a {
+            text-decoration: none;
+            color: $color1;
+            background-color: $color2;
+            padding: 10px 20px 10px 20px;
+            box-shadow: rgba(233, 152, 1, 0.664) 0px 5px 15px;
+            transition: 0.5s;
+
+            @media only screen and (min-width: 480px) {
+                padding: 10px 50px 10px 50px;
+            }
+        }
+
+        a:hover {
+            transition: 0.5s;
+            background-color: #000000;
+
+        }
+    }
+
+    #description {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: $color1;
+
+        h3 {
+            font-size: 30px;
+            color: $color2;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    #news {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+
+        #actualite {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            a {
+                width: 200px;
+                height: auto;
+                background-color: $color3;
+                border: $color3 1px solid;
+                transition: 0.5s;
+                text-decoration: none;
+
+                .topCard {
+                    img {
+                        width: 100%;
+                        height: 100px;
+                        border-bottom: $color2 solid 5px;
+                    }
+                }
+
+                .bottomCard {
+                    display: flex;
+                    justify-content: center;
+                    border-bottom: $color2 solid 5px;
+
+
+                    p {
+                        padding: 10px;
+                        color: $color2;
+                        font-weight: bold;
+                        font-size: 25px;
+                    }
+                }
+            }
+
+            a:hover {
+                transition: 0.5s;
+                filter: drop-shadow(5px 5px 10px black);
+                -webkit-filter: drop-shadow(5px 5px 10px black);
+
+            }
+        }
+
+    }
+
+    #flashInfo {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 30px;
+        gap: 10px;
+
+        article {
+            width: 300px;
+            border: 1px solid $color3;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: $color1;
+            box-shadow: 5px 5px 10px $color3;
+
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 15px;
+                ;
+            }
+
+        }
+    }
+
+    #commande {
+        padding: 50px;
+        background-color: $color1;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            li {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    svg {
+                        color: $color2;
+                    }
+                }
+
+                a {
+                    padding: 10px;
+                    background-color: $color2;
+                    color: $color1;
+                    text-decoration: none;
+                    box-shadow: 5px 5px 10px $color3;
+                    transition: 0.5;
+                    border: 1px solid $color2;
+
+
+                }
+
+                a:hover {
+                    transition: 0.5;
+                    box-shadow: 5px 5px 10px $color2 ;
+                    background-color: $color1;
+                    color: $color2;
+                    border: 1px solid $color2;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+        }
+    }
+
+}
+
+footer {
+    background-color: $color3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+
+    img {
+        height: 25px;
+    }
+
+    ul {
+        position: relative;
+        right: 0px;
+        display: flex;
+        gap: 20px;
+
+        li {
+            list-style: none;
+
+
+            a {
+                svg {
+                    color: $color2 ;
+                    width: 20px;
+                    height: 20px;
+                    transition: 0.5s;
+                }
+
+                svg:hover {
+                    transition: 0.5s;
+                    color: $color1;
+                }
+            }
+        }
+    }
+}
